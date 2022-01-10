@@ -1,0 +1,10 @@
+config.json
+.vscode/
+.gnupg/
+$RECYCLE.BIN/
+.git-credentials
+.gitconfig
+System Volume Information/
+.npm/
+node_modules/
+package-lock.json
