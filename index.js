@@ -1,4 +1,4 @@
-const { mongo } = require('./config.json')
+const { mongodb } = require('./config.json')
 const mongoose = require('mongoose')
 const mongo = require('dbdjs.mongo').default
 
@@ -23,7 +23,7 @@ intents: "all",
 database:{
         type:"dbdjs.mongo",
         db:require('dbdjs.mongo'),
-        path: mongo ,
+        path: mongodb,
         tables:["main","economy", "prefix", "cooldowns", "bots"]
     }
 })
