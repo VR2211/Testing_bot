@@ -2,7 +2,7 @@ const { mongodb } = require('./config.json')
 const mongoose = require('mongoose')
 const mongo = require('dbdjs.mongo').default
 
-mongoose.connect( mongo, {
+mongoose.connect( mongodb, {
  useNewUrlParser: true,
  useUnifiedTopology: true,
  useFindAndModify: false,
