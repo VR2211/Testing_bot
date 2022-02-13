@@ -3,7 +3,7 @@ module.exports = [{
     code: `
    $title[1;Inventory]
    $description[1;Welcome $username to your Inventory
-   Tip: \`\`\` Do $getServerVar[prefix;;prefix]use to use the items \`\`\`
+   Tip: \`\`\` Do $getServerVar[prefix;$clientID;prefix]use to use the items \`\`\`
 
    The items in your inventory are:
    

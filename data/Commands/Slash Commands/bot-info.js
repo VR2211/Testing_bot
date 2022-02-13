@@ -6,7 +6,7 @@ name: "bot-info",
 **About AIOB**
 
 Gobal Prefix: a!
-Server Prefix $getServerVar[prefix]
+Server Prefix $getServerVar[prefix;$clientID;prefix]
 
 **Bot Info**
 • **Owner**: $usertag[$botownerid]

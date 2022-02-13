@@ -8,7 +8,7 @@ module.exports = {
       **About AIOB**
   
       Gobal Prefix: a!
-      Server Prefix $getServerVar[prefix;;prefix]
+      Server Prefix $getServerVar[prefix;$clientID;prefix]
       
       **Bot Info**
       • **Owner**: $usertag[$botownerid]
@@ -18,7 +18,7 @@ module.exports = {
       • **CreationDate**: $creationDate[840319225889554453;date]
       • **Total commands**: $commandsCount
       • ** Server Count **: $ServerCount
-      • ** Bot Version **: $getVar[version;bots]
+      • ** Bot Version **: $getVar[version;$clientID;bots]
       • ** Release date **: Soon to Come
       
       **Hosting Info**

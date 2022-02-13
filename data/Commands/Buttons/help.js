@@ -5,7 +5,7 @@ module.exports = [{
     $description[1;
  
         The Global Prefix is: t!
-        Your server Prefix is: $getServerVar[prefix;;prefix]
+        Your server Prefix is: $getServerVar[prefix;$clientID;prefix]
         [Support server](https://discord.gg/4j8EyByVHc)
         
         **Dear $username Thank you for use the help command please choose what you need you help with under this message.**
@@ -32,8 +32,7 @@ module.exports = [{
     $interactionUpdate[;{newEmbed: {title:Genaral Commands}{description:
         **Dear $username**
 
-        The Global Prefix is: a!
-        Your server Prefix is: $getServerVar[prefix]
+    
 
        **The General Commands that your can use with AIOB Alpha are
 
@@ -77,8 +76,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==▶;]`
  code: `$interactionUpdate[;{newEmbed: {title:Economy Commands} {description:
 **Dear $username**
 
-        The Global Prefix is: a!
-        Your server Prefix is: $getServerVar[prefix]
+
 
 **The Economy Commands that you can use with AIOB Alpha Are
 
@@ -127,8 +125,6 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==▶1;]`,
  code: `$interactionUpdate[;{newEmbed: {title:Fun Commands} {description:
 **Dear $username**
 
-    The Global Prefix is: a!
-        Your server Prefix is: $getServerVar[prefix]
 
     **The Fun Commands that you can use with AIOB Alpha
     
@@ -202,9 +198,6 @@ $onlyif[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
  code: `$interactionUpdate[;{newEmbed: {title:Admin Only Commands} {description:
 **Dear $username**
 
-    The Global Prefix is: a!
-        Your server Prefix is: $getServerVar[prefix]
-
     **The Admin Commands that you can use with AIOB Alpha are
     
     Nuke=nuke 
@@ -235,9 +228,6 @@ $onlyif[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
  code: `$interactionUpdate[;{newEmbed: {title:Developer Only} {description:
     **Dear $username**
 
-    The Global Prefix is: a!
-        Your server Prefix is: $getServerVar[prefix]
-
     **Developer Only Commands 
     
     CommandUpdate
@@ -266,7 +256,7 @@ $onlyif[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
     code: `$interactionUpdate[;{newEmbed: {title:Help Command}{description:
 
         The bots Global Prefix is: a!
-        The bots server Prefix is: $getServerVar[prefix;;prefix]
+        The bots server Prefix is: $getServerVar[prefix;$clientID;prefix]
         [Support server](https://discord.gg/4j8EyByVHc)
         
         **Dear $username Thank you for use the help command pls chose what you need you  nedd help with under this message.**
