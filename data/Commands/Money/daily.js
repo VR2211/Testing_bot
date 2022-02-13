@@ -4,7 +4,7 @@ module.exports = ({
 $description[1;Your daily reward is $$random[250;850]]
 $footer[1;Requested by $username]
 $color[1;78eab8]
-$setGlobalUserVar[Cash;$sum[$getGlobalUserVar[Cash];$random[250;850]]]
+$setGlobalUserVar[Cash;$sum[$getGlobalUserVar[Cash;;economy];$random[250;850]];;economy]
 $Globalcooldown[24h;Pls try again in %time%]
-$onlyIf[$getGlobalUserVar[acc]==true;You need to have an acc do $getServerVar[prefix]begin]`
+$onlyIf[$getGlobalUserVar[acc;;economy]==true;You need to have an acc do $getServerVar[prefix;;prefix]begin]`
 })

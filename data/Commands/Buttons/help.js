@@ -5,7 +5,7 @@ module.exports = [{
     $description[1;
  
         The Global Prefix is: t!
-        Your server Prefix is: $getServerVar[prefix]
+        Your server Prefix is: $getServerVar[prefix;;prefix]
         [Support server](https://discord.gg/4j8EyByVHc)
         
         **Dear $username Thank you for use the help command please choose what you need you help with under this message.**
@@ -58,7 +58,7 @@ module.exports = [{
         **r-Bug-eg**
     
          **request-eg**}{color:RANDOM}{footer: Page 1/7}};{actionRow:{button:◀:1:⏪0_$authorId::}{button:Support:5:https\\://discord.gg/4j8EyByVHc:false:<a:SOS:922509784639492096>}}
-      $onlyIf[$getGlobalUserVar[acc]==true;{
+      $onlyIf[$getGlobalUserVar[acc;;economy]==true;{
       "embeds" : "{newEmbed:{title:Error}{description:You must have an acc to be able to use this command}{color:RANDOM}{footer: Your acc has be reset}}"
   }]
  
@@ -266,7 +266,7 @@ $onlyif[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
     code: `$interactionUpdate[;{newEmbed: {title:Help Command}{description:
 
         The bots Global Prefix is: a!
-        The bots server Prefix is: $getServerVar[prefix]
+        The bots server Prefix is: $getServerVar[prefix;;prefix]
         [Support server](https://discord.gg/4j8EyByVHc)
         
         **Dear $username Thank you for use the help command pls chose what you need you  nedd help with under this message.**
@@ -280,7 +280,7 @@ $onlyif[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[aut
     6/7 **Devloper Only**
     0/7 **home page**}{color:RANDOM}{footer: Page 0/7}};{actionRow:{button:⏪:1:⏪0_$authorId:false:}{button:◀:1:▶5_$authorId:false:}{button:▶:1:▶_$authorId:false:}{button:⏩:1:▶6_$authorId:true:}}{actionRow:{button:Support:5:https\\://discord.gg/4j8EyByVHc:false:<a:SOS:922509784639492096>}}]
 
-  $onlyIf[$getGlobalUserVar[acc]==true;{
+  $onlyIf[$getGlobalUserVar[acc;;economy]==true;{
       "embeds" : "{newEmbed:{title:Error}{description:You must have an acc to be able to use this command}{color:RANDOM}{footer: Your acc has be reset}}"
   }]
  

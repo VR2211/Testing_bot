@@ -11,6 +11,6 @@ A Gun
 A Pear
 
 A Laptop]
-$onlyIf[$getGlobalUserVar[acc]==true;You need to have an acc do $getServerVar[prefix]begin]`
+$onlyIf[$getGlobalUserVar[acc;;economy]==true;You need to have an acc do $getServerVar[prefix]begin]`
 })
   

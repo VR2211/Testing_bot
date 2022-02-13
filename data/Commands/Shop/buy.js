@@ -19,10 +19,10 @@ module.exports = [{
        prototype: "button",
        code: `$interactionUpdate[;{newEmbed: {title:Bought a Gun}{description:Hello $username your bought a gun for 600 Cash}}]
    
-       $setGlobalUserVar[Cash;$sub[$getGlobalUserVar[Cash];600]]
-       $setGlobalUserVar[Gun;$sum[$getGlobalUserVar[Gun];1]]
+       $setGlobalUserVar[Cash;$sub[$getGlobalUserVar[Cash;;economy];600];;economy]
+       $setGlobalUserVar[Gun;$sum[$getGlobalUserVar[Gun;;economy];1];;economy]
    
-     $onlyIf[$getGlobalUserVar[Cash]>600;{
+     $onlyIf[$getGlobalUserVar[Cash;;economy]>600;{
    "embeds" : "{newEmbed:{title:Error}{description:you don't have enough Cash to buy a Gun you need 600 cash}{color:RED}}",
     "ephemeral" : true,
     "options" : {
@@ -30,7 +30,7 @@ module.exports = [{
        }
 }]
 
-       $onlyIf[$getGlobalUserVar[acc]==true;{
+       $onlyIf[$getGlobalUserVar[acc;;economy]==true;{
    "embeds" : "{newEmbed:{title:Error}{description:You need to have an account do $getServerVar[prefix]begin to get an account}{color:RED}}",
     "ephemeral" : true,
     "options" : {
@@ -52,17 +52,17 @@ module.exports = [{
     prototype: "button",
     code: ` $interactionUpdate[;{newEmbed: {title:Bought a Pear}{description:Hello $username your bought a Pear for 60 Cash}}]
 
-    $setGlobalUserVar[Cash;$sub[$getGlobalUserVar[Cash];60]]
-       $setGlobalUserVar[Pear;$sum[$getGlobalUserVar[Pear];1]]
+    $setGlobalUserVar[Cash;$sub[$getGlobalUserVar[Cash;;economy];60];;economy]
+    $setGlobalUserVar[Pear;$sum[$getGlobalUserVar[Pear;;economy];1];;economy]
 
-       $onlyIf[$getGlobalUserVar[Cash]>60;{
+       $onlyIf[$getGlobalUserVar[Cash;;economy]>60;{
         "embeds" : "{newEmbed:{title:Error}{description:you don't have enough Cash to buy a Pear you need 60 cash}{color:RED}}",
        "ephemeral" : true,
        "options" : {
            "interaction" : true
        }
         }]
-            $onlyIf[$getGlobalUserVar[acc]==true;{
+            $onlyIf[$getGlobalUserVar[acc;;economy]==true;{
    "embeds" : "{newEmbed:{title:Error}{description:You need to have an account do $getServerVar[prefix]begin to get an account}{color:RED}}",
     "ephemeral" : true,
     "options" : {
@@ -84,17 +84,17 @@ module.exports = [{
     prototype: "button",
     code: ` $interactionUpdate[;{newEmbed: {title:Bought a Laptop}{description:Hello $username your bought a Laptop for 500 Cash}}]
 
-    $setGlobalUserVar[Cash;$sub[$getGlobalUserVar[Cash];500]]
-       $setGlobalUserVar[Laptop;$sum[$getGlobalUserVar[Laptop];1]]
+    $setGlobalUserVar[Cash;$sub[$getGlobalUserVar[Cash;;economy];500];;economy]
+       $setGlobalUserVar[Laptop;$sum[$getGlobalUserVar[Laptop;;economy];1];;economy]
 
-       $onlyIf[$getGlobalUserVar[Cash]>500;{
+       $onlyIf[$getGlobalUserVar[Cash;;economy]>500;{
          "embeds" : "{newEmbed:{title:Error}{description:you don't have enough Cash to buy a Laptop you need 500 cash}{color:RED}}",
        "ephemeral" : true,
        "options" : {
            "interaction" : true
        }
         }]
-            $onlyIf[$getGlobalUserVar[acc]==true;{
+            $onlyIf[$getGlobalUserVar[acc;;economy]==true;{
    "embeds" : "{newEmbed:{title:Error}{description:You need to have an account do $getServerVar[prefix]begin to get an account}{color:RED}}",
     "ephemeral" : true,
     "options" : {

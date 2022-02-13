@@ -14,14 +14,14 @@ $color[1;RED]
         prototype: "button",
      code: `
 $interactionUpdate[; {newEmbed: {title:Reset}{description:Hello $username I Just reset your acc}{color:RANDOM}{footer: Your acc has be reset}}]
-     $setGlobalUserVar[acc;false]
-     $setGlobalUserVar[Cash;0]
-     $setGlobalUserVar[Bank;0]
-     $setGlobalUserVar[Laptop;0]
-     $setGlobalUserVar[Gun;0]
-     $setGlobalUserVar[Pear;0]
+     $setGlobalUserVar[acc;false;;economy]
+     $setGlobalUserVar[Cash;0;;economy]
+     $setGlobalUserVar[Bank;0;;economy]
+     $setGlobalUserVar[Laptop;0;;economy]
+     $setGlobalUserVar[Gun;0;;economy]
+     $setGlobalUserVar[Pear;0;;economy]
 
-$onlyIf[$getGlobalUserVar[Cash]>0;{
+$onlyIf[$getGlobalUserVar[Cash;;economy]>0;{
       "embeds" : "{newEmbed:{title:Error}{description:You acc must be in debt}{color:RANDOM}{footer: Your acc can not be reset}}",
 "ephemeral" : false,
         "options" : {
@@ -29,7 +29,7 @@ $onlyIf[$getGlobalUserVar[Cash]>0;{
         }
     }]
      
-      $onlyIf[$getGlobalUserVar[acc]==true;{
+      $onlyIf[$getGlobalUserVar[acc;;economy]==true;{
       "embeds" : "{newEmbed:{title:Error}{description:You must have an acc to be able to reset it}{color:RANDOM}{footer: Your acc can not be reset}}",
 "ephemeral" : true,
         "options" : {

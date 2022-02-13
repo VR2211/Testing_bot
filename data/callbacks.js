@@ -6,14 +6,28 @@ module.exports = (bot) => {
   Laptop: '0',
   Gun: '0',
   Pear: '0',
-  acc: 'false',
-  version: '0.9.0',
+  acc: 'false', 
   custom: '',
-  dev: "",
-  blacklist: "",
+ }, 'economy')
+    
+ bot.variables({
   //Bot Option
   prefix: 'a!'
-  })
+  }, 'prefix')
+    
+bot.variables({
+  version: '0.9.0',
+    }, 'bots')
+    
+    bot.variables({
+  dev: "",
+  blacklist: "",
+    })
+
+ 
+                  
+                  
+    
     
  bot.onInteractionCreate(),
  bot.onGuildJoin()

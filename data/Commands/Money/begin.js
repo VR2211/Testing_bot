@@ -26,15 +26,15 @@ Laptop = 500 Cash each and i have give you two which makes 1000 in total
 Gun = 600 Cash each and i have given you 1 which makes 600 in total
 Pear = 60 Cash each and i have given you 5 which makes it $math[60*5]}}]
 
-  $setGlobalUserVar[acc;true]
- $setGlobalUserVar[Cash;$sum[$getGlobalUserVar[Cash];500]]
-$setGlobalUserVar[Bank;$sum[$getGlobalUserVar[Bank];250]]
-$setGlobalUserVar[Laptop;$sum[$getGlobalUserVar[Laptop];2]]
-$setGlobalUserVar[Gun;$sum[$getGlobalUserVar[Gun];1]]
-$setGlobalUserVar[Pear;$sum[$getGlobalUserVar[Pear];5]]
+$setGlobalUserVar[acc;true;;economy]
+ $setGlobalUserVar[Cash;$sum[$getGlobalUserVar[Cash;;economy;$authorID];500];;economy]
+$setGlobalUserVar[Bank;$sum[$getGlobalUserVar[Bank;;economy;$authorID];250];;economy]
+$setGlobalUserVar[Laptop;$sum[$getGlobalUserVar[Laptop;;economy;$authorID];2];;economy]
+$setGlobalUserVar[Gun;$sum[$getGlobalUserVar[Gun;;economy;$authorID];1];;economy]
+$setGlobalUserVar[Pear;$sum[$getGlobalUserVar[Pear;;economy;$authorID];5];;economy]
 
 
-  $onlyIf[$getGlobalUserVar[acc]==false;{
+  $onlyIf[$getGlobalUserVar[acc;;economy]==false;{
     "embeds" : "{newEmbed:{title:Error}{description:You must have an account so you can not make a new one account}{color:RED}{footer: Requested by $username}}",
 "ephemeral" : true,
       "options" : {
