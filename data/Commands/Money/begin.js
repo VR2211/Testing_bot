@@ -26,15 +26,15 @@ Laptop = 500 Cash each and i have give you two which makes 1000 in total
 Gun = 600 Cash each and i have given you 1 which makes 600 in total
 Pear = 60 Cash each and i have given you 5 which makes it $math[60*5]}}]
 
-$setGlobalUserVar[acc;true;;economy]
- $setGlobalUserVar[Cash;$sum[$getGlobalUserVar[Cash;;economy;$authorID];500];;economy]
-$setGlobalUserVar[Bank;$sum[$getGlobalUserVar[Bank;;economy;$authorID];250];;economy]
-$setGlobalUserVar[Laptop;$sum[$getGlobalUserVar[Laptop;;economy;$authorID];2];;economy]
-$setGlobalUserVar[Gun;$sum[$getGlobalUserVar[Gun;;economy;$authorID];1];;economy]
-$setGlobalUserVar[Pear;$sum[$getGlobalUserVar[Pear;;economy;$authorID];5];;economy]
+$setGlobalUserVar[acc;true;$authorID;economy]
+ $setGlobalUserVar[Cash;$sum[$getGlobalUserVar[Cash;$authorID;economy];500];$authorID;economy]
+$setGlobalUserVar[Bank;$sum[$getGlobalUserVar[Bank;$authorID;economy];250];$authorID;economy]
+$setGlobalUserVar[Laptop;$sum[$getGlobalUserVar[Laptop;$authorID;economy];2];$authorID;economy]
+$setGlobalUserVar[Gun;$sum[$getGlobalUserVar[Gun;$authorID;economy];1];$authorID;economy]
+$setGlobalUserVar[Pear;$sum[$getGlobalUserVar[Pear;$authorID;economy];5];$authorID;economy]
 
 
-  $onlyIf[$getGlobalUserVar[acc;;economy]==false;{
+  $onlyIf[$getGlobalUserVar[acc;$authorID;economy]==false;{
     "embeds" : "{newEmbed:{title:Error}{description:You must have an account so you can not make a new one account}{color:RED}{footer: Requested by $username}}",
 "ephemeral" : true,
       "options" : {
